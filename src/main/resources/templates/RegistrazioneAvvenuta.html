@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Dati restituiti dal form</title>
+</head>
+<body>
+<p th:text= "'Titolo: ' + ${libro.titolo}" />
+<p th:text= "'Autore: ' + ${libro.autore}" />
+<p th:text= "'Anno Pubblicazione: ' + ${libro.anno_pb}" />
+<p th:text= "'Link: ' + ${libro.link}" />
+<p th:text="'La registrazione &egrave; avvenuta con successo'"/>
+<a href="/registrazione">Registra un nuovo utente</a>
+</body>
+</html>

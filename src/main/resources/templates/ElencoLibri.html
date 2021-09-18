@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Dati restituiti dal form</title>
+</head>
+<body>
+<span th:if="${#lists.isEmpty(myList)}">Non ci sono ancora libri registrati</span>
+<span th:unless="${#lists.isEmpty(myList)}"><h1>Elenco degli libri gi&agrave; registrati:</h1>
+		</span>
+<ul th:each="libro : ${myList}">
+    <li th:text="${libro.titolo}"></li>
+</ul>
+<a href="/registrazione">Registra un nuovo utente</a>
+
+
+</body>
+</html>

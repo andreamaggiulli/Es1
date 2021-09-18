@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="it">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Form utente</title>
+</head>
+<body>
+<h1>Registrazione Libri</h1>
+<form action="#" th:action="@{/registrazione}" th:object="${libro}" method="post">
+    <p>Titolo: <input type="text" th:field="*{titolo}" /></p>
+    <p>Autore: <input type="text" th:field="*{autore}" /></p>
+    <p>Anno Pubblicazione: <input type="text" th:field="*{anno_pb}" /></p>
+    <p>Link: <input type="text" th:field="*{link}" /></p>
+    <p><input type="submit" value="Registra" /> <input type="reset" value="Reset" /> </p>
+</form>
+<a href="/ElencoLibri">Mostra tutti i libri</a>
+
+
+</body>
+</html>
